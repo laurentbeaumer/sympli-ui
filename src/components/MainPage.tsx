@@ -14,11 +14,11 @@ export default function QuoteMain(props: any) {
     <div className="MainPage">
       <table>
         <tbody>
-          <th>
+          <tr>
             <td>Search Engine</td>
             <td>Keyword</td>
             <td>Occurences</td>
-          </th>
+          </tr>
           {occurences.map((occurence: string[], index: number) => {
             return (
               <tr key={index}>
