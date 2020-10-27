@@ -1,0 +1,11 @@
+.MainPage tr{
+  height: 20px;
+}
+
+.MainPage td{
+  background-color: #594e43;  
+  min-width: 60px;
+  font-size: 20x;
+  padding: 0 10px 0 10px;
+  text-align: left;
+}

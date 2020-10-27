@@ -1,0 +1,30 @@
+.NavigationBar table {
+  background-color: #372e2d;
+}
+
+.NavigationBar tr {
+  background-color: transparent;
+}
+
+.NavigationBar td {
+  height: 30px;
+  min-width: 120px;
+  background-color: #454648;
+  border: wheat 2px;
+  font-size: 1.2em;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+.NavigationBar td:last-child {
+  width: 100%;
+  background-color: transparent;
+}
+
+.NavigationBar a {
+  color: #ff3612;
+}
+
+.NavigationBar a:hover {
+  color: yellow;
+}

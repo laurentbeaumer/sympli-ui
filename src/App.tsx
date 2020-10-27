@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import MainPage from './components/MainPage';
+import NavigationBar from './components/NavigationBar';
+import SettingsPage from './components/SettingsPage';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const routes = [
+  {
+    path: "/",
+    exact: true,
+    main: () => <MainPage />
+  },
+  {
+    path: "/settings",
+    exact: true,
+    main: () => <SettingsPage />
+  },
+];
 
-export default App;
+export default () =>
+  <div className="App">
+    <Router>
+      <NavigationBar />
+      {routes.map((route: {
+        path: any;
+        exact: any;
+        main: any;
+      },
+        index: any) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        ))}
+    </Router>
+  </div>
