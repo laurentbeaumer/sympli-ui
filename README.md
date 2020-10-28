@@ -1,5 +1,6 @@
 ## Dependencies
-NodeJS
+* NodeJS
+* TypeScript
 
 ## Command lines
 * npm install
